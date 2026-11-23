@@ -1,0 +1,17 @@
+{
+  "name": "presentation-sync",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Локальный синхронизатор до трёх презентаций и дисплеев для macOS.",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "check": "node --check src/main.js && node --check src/preload.js && node --check src/controller.js"
+  },
+  "devDependencies": {
+    "electron": "45.4.1"
+  },
+  "dependencies": {
+    "pdfjs-dist": "6.5.438"
+  }
+}

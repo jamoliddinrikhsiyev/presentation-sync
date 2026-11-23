@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Presentation Sync</title>
+    <link rel="stylesheet" href="controller.css" />
+  </head>
+  <body>
+    <main>
+      <header>
+        <div>
+          <p class="eyebrow">LOCAL PRESENTATION PLAYER</p>
+          <h1>Presentation Sync</h1>
+          <p class="lead">До трёх презентаций на трёх экранах. Кликер листает всё одновременно.</p>
+        </div>
+        <div class="status" id="status">Подключите экраны и выберите файлы</div>
+      </header>
+
+      <section class="panel">
+        <div class="section-title"><h2>Презентации и экраны</h2><button id="refresh" class="quiet">Обновить экраны</button></div>
+        <p class="hint">PDF открывается сразу. Для файлов PowerPoint (.pptx) нужен LibreOffice — он бесплатно конвертирует их локально, без загрузки в интернет.</p>
+        <div id="assignments" class="assignments"></div>
+      </section>
+
+      <section class="controls panel">
+        <div class="button-row">
+          <button id="start" class="primary">Запустить на экранах</button>
+          <button id="stop" class="quiet">Закрыть показы</button>
+        </div>
+        <div class="remote" aria-label="Управление показом">
+          <button data-command="first" title="В начало">|◀</button>
+          <button data-command="previous" title="Предыдущий слайд">‹</button>
+          <button data-command="next" class="next" title="Следующий слайд">›</button>
+        </div>
+        <p class="hint center">Кликер: <kbd>→</kbd>, <kbd>Space</kbd> — дальше; <kbd>←</kbd> — назад; <kbd>Home</kbd> — в начало. После запуска не закрывайте это окно.</p>
+      </section>
+    </main>
+    <div id="toast" role="alert"></div>
+    <script src="controller.js"></script>
+  </body>
+</html>

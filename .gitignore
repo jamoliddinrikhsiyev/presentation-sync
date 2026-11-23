@@ -1,0 +1,18 @@
+# Installed dependencies
+node_modules/
+
+# Packaged applications and build products
+dist/
+out/
+release/
+*.dmg
+*.zip
+
+# Local operating-system and editor files
+.DS_Store
+.vscode/
+
+# Logs and local settings
+*.log
+.env
+.env.local
